@@ -1,68 +1,79 @@
 function computerPlay() {
-	let rand = Math.floor(Math.random() * 3);
+	const rand = Math.floor(Math.random() * 3);
 	switch (rand) {
 		case 0:
 			return 'rock'
-			break;
 		case 1:
 			return 'paper'
-			break;
 		case 2:
 			return 'scissors'
 	}
 }
-function playRound() {
-	let player = prompt("Rock, Paper, or Scissors?").toLowerCase();
-	let comp = computerPlay();
+function playRound(player) {
+	const comp = computerPlay();
+	const win = document.querySelector('.win');
+	const lose = document.querySelector('.lose');
+
+	win.style.visibility = 'hidden';
+	lose.style.visibility = 'hidden';
+
 	if (player==comp) {
-		console.log("The computer selected " + comp + ". It's a tie!");
+		win.textContent = "It's a tie!";
+		lose.textContent = "It's a tie!";
+		win.style.visibility = 'visible';
+		lose.style.visiblity = 'visible';
 		return 'tie'
+
 	} else if (player=='rock' && comp=='paper') {
-		console.log("You lose! Paper beats rock");
+		lose.textContent = "Paper beats rock";
+		lose.style.visibility = 'visible';
 		return 'lose'
+
 	} else if (player=='rock' && comp=='scissors') {
-		console.log("You win! Rock beats scissors");
+		win.textContent = "Rock beats scissors";
+		win.style.visibility = 'visible';
 		return 'win'
+
 	} else if (player=='paper' && comp=='rock') {
-		console.log("You win! Paper beats rock");
+		win.textContent = "Paper beats rock";
+		win.style.visibility = 'visible';
 		return 'win'
+
 	} else if (player=='paper' && comp=='scissors') {
-		console.log("You lose! Scissors beats paper");
+		lose.textContent = "Scissors beats paper";
+		lose.style.visibility = 'visible';
 		return 'lose'
+
 	} else if (player=='scissors' && comp=='rock') {
-		console.log("You lose! Rock beats scissors");
+		lose.textContent = "Rock beats scissors";
+		lose.style.visibility = 'visible';
 		return 'lose'
+
 	} else if (player=='scissors' && comp=='paper') {
-		console.log("You win! Scissors beats paper");
+		win.textContent = "Scissors beats paper";
+		win.style.visibility = 'visible';
 		return 'win'
-	} else {
-		console.log("That's not one of the options! Try again");
-		return 'error'
 	}
 }
 function game() {
-	let round = 1;
-	let playerScore = 0;
-	let compScore = 0;
-    while (round <= 5) {
-    	console.log("Round " + round + ":")
-    	let result = playRound();
+	const playerScore = document.querySelector('.player .score');
+	const compScore = document.querySelector('.comp .score');
+
+    while (playerScore.textContent < 5 && compScore.textContent < 5) {
+    	const result = playRound();
     	switch (result) {
     		case 'win':
-    			round++;
-    			playerScore++;
+    			const score = parseInt(playerScore.textContent);
+    			playerScore.textContent = score + 1;
     			break;
     		case 'lose':
-    			round++;
-    			compScore++;
+    			const score = parseInt(compScore.textContent);
+    			compScore.textContent = score + 1;
     			break;
     		case 'tie':
-    			round++;
-    			break;
-    		case 'error':
     			break;
     	}
-    }
+    }  
     console.log("Final score: " + playerScore + " to " + compScore);
     if (playerScore > compScore) {
     	console.log("You win!!!");

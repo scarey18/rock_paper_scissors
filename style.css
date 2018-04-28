@@ -1,0 +1,68 @@
+html {
+	background: #7670bf;
+	font: 20px 'Gloria Halleluja', cursive;
+	color: black;
+}
+body {
+	text-align: center;
+}
+h1 {
+	font-size: 3em;
+}
+.scores {
+	display: flex;
+	justify-content: center;
+}
+.scores div {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+	border: 1px solid black;
+	background: #B9BF70;
+	margin: 0px 20px;
+	min-width: 185px;
+	min-height: 185px;
+}
+.scores div p {
+	margin: 0;
+}
+.score {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 3em;
+	color: white;
+}
+.result {
+	visibility: hidden;
+	width: 70px;
+}
+.buttons {
+	display: flex;
+	justify-content: center;
+}
+.buttons div {
+	display: flex;
+	flex-flow: column;
+	margin: 0 20px;
+}
+img {
+	height: 175px;
+}
+.endgame {
+	visibility: hidden;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 5vh;
+}
+.endgame h2 {
+	font-size: 3em;
+	margin: 0;
+}
+.endgame button {
+	height: 5vh;
+	min-width: 15vw;
+	font-family: 'Gloria Halleluja', cursive;
+	font-size: 0.8rem;
+	border: 1px solid black;
+	border-radius: 7px;
+}

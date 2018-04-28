@@ -1,5 +1,51 @@
 <!DOCTYPEhtml>
-<html>
-	<head><title>Rock Paper Scissors</title></head>
-	<body><script src="script.js"></script></body>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Rock Paper Scissors</title>
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto+Mono" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<h1>Rock, Paper, Scissors</h1>
+	<h3>First one to 5 wins!</h3>
+
+	<div class="scores">
+		<p class="result win">Paper beats rock</p>
+		<div class="player">
+			<p>Your Score:</p>
+			<span class="score">0</span>
+		</div>
+		<div class="comp">
+			<p>Opponent's Score:</p>
+			<span class="score">0</span>
+		</div>
+		<p class="result lose">Scissors beats paper</p>
+	</div>
+
+	<h2>Make your selection:</h2>
+	<div class="buttons">
+		<div class="rock">
+			<img src="http://worldartsme.com/images/cartoon-rock-clipart-1.jpg">
+			<span>Rock</span>
+		</div>
+		<div class="paper">
+			<img src="https://cdn0.iconfinder.com/data/icons/rock-paper-scissors-emoji/792/rock-paper-scissors-emoji-cartoon-019-512.png">
+			<span>Paper</span>
+		</div>
+		<div class="scissors">
+			<img src="https://cdn0.iconfinder.com/data/icons/rock-paper-scissors-emoji/792/rock-paper-scissors-emoji-cartoon-010-512.png">
+			<span>Scissors</span>
+		</div>
+	</div>
+
+
+	<div class="endgame">
+		<h2 class="announcement">You win! :)</h2>
+		<button class="reset">Click to play again</button>
+	</div>
+
+	<script src="script.js"></script>
+</body>
 </html>
