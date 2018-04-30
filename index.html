@@ -12,7 +12,7 @@
 	<h3>First one to 5 wins!</h3>
 
 	<div class="scores">
-		<p class="result win">Paper beats rock</p>
+		<p class="result win hidden">Paper beats rock</p>
 		<div class="player">
 			<p>Your Score:</p>
 			<span class="score">0</span>
@@ -21,28 +21,28 @@
 			<p>Opponent's Score:</p>
 			<span class="score">0</span>
 		</div>
-		<p class="result lose">Scissors beats paper</p>
+		<p class="result lose hidden">Scissors beats paper</p>
 	</div>
 
 	<h2>Make your selection:</h2>
 	<div class="buttons">
-		<div class="rock">
+		<div id="rock">
 			<img src="http://worldartsme.com/images/cartoon-rock-clipart-1.jpg">
 			<span>Rock</span>
 		</div>
-		<div class="paper">
+		<div id="paper">
 			<img src="https://cdn0.iconfinder.com/data/icons/rock-paper-scissors-emoji/792/rock-paper-scissors-emoji-cartoon-019-512.png">
 			<span>Paper</span>
 		</div>
-		<div class="scissors">
+		<div id="scissors">
 			<img src="https://cdn0.iconfinder.com/data/icons/rock-paper-scissors-emoji/792/rock-paper-scissors-emoji-cartoon-010-512.png">
 			<span>Scissors</span>
 		</div>
 	</div>
 
 
-	<div class="endgame">
-		<h2 class="announcement">You win! :)</h2>
+	<div class="endgame hidden">
+		<h2 class="announcement"></h2>
 		<button class="reset">Click to play again</button>
 	</div>
 

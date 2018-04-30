@@ -12,6 +12,7 @@ h1 {
 .scores {
 	display: flex;
 	justify-content: center;
+	z-index: 10;
 }
 .scores div {
 	display: flex;
@@ -32,7 +33,6 @@ h1 {
 	color: white;
 }
 .result {
-	visibility: hidden;
 	width: 70px;
 }
 .buttons {
@@ -48,15 +48,22 @@ img {
 	height: 175px;
 }
 .endgame {
-	visibility: hidden;
+	position: absolute;
+	height: 60%;
+	width: 100%;
+	top: 40%;
+	left: 0;
 	display: flex;
 	flex-flow: column;
+	justify-content: flex-start;
 	align-items: center;
 	margin-top: 5vh;
+	z-index: 5;
+	background: #7670bf;
 }
-.endgame h2 {
+.endgame .announcement {
 	font-size: 3em;
-	margin: 0;
+	margin: 0 0 7vh 0;
 }
 .endgame button {
 	height: 5vh;
@@ -65,4 +72,22 @@ img {
 	font-size: 0.8rem;
 	border: 1px solid black;
 	border-radius: 7px;
+}
+.hidden {
+	visibility: hidden;
+}
+.buttons div:hover {
+	background-color: #706d94;
+	border-color: #ffc600;
+	box-shadow: 0 0 1rem #ffc600;
+}
+.playerChoice {
+	background-color: #706d94;
+	border-color: #ffc600;
+	box-shadow: 0 0 1rem #ffc600;
+}
+.compChoice {
+	background-color: #706d94;
+	border-color: #e60b26;
+	box-shadow: 0 0 1rem #e60b26;
 }
